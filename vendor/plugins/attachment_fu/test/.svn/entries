@@ -1,0 +1,133 @@
+8
+
+dir
+3356
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/attachment_fu/test
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+test_helper.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+9d272003c294faa402ab4dd124ceb2ca
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+processors
+dir
+
+basic_test.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+bb6f889236ea7f6df8d260be801d1cc9
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+schema.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+c1a39fd3f06c9b2fd7afe16c821b0f28
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+database.yml
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+de61d5c12656d3628ed4444610729e6b
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+base_attachment_tests.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+9fb616a530242c1ab740f38b83e23b7b
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+fixtures
+dir
+
+backends
+dir
+
+validation_test.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+709cfdd36b9200460253c2583540d93c
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+extra_attachment_test.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+067e320475b9f11a335ab3182facf297
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+geometry_test.rb
+file
+
+
+
+
+2008-11-24T13:59:17.000000Z
+80ddee3f32a0f9523ada06ebac1dde2b
+2008-09-24T16:12:36.531392Z
+2857
+tih
+

@@ -1,0 +1,65 @@
+<div class="column span-5 first">
+	<div class="boxLightGray">
+	    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+		<div class="inner-box">
+			<span class="micro_title">Embed</span><br/>
+			<textarea style="width:150px">
+				<iframe src ="<%=embed_url(0)%>" width="400"/>
+			</textarea>
+		</div>
+		<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+	</div>
+	
+</div>
+
+<div class="column span-12">
+	<div class="boxLightGray">
+	    <b class="rl5"></b><b class="rl4"></b><b class="rl3"></b><b class="rl2"></b><b class="rl1"></b>
+		<div class="inner-boxl">
+			<% if @in_embed%>
+			<%content_tag("div", :style=>"float:left;") do %>
+				<%=image_tag @in_embed.photo.public_filename, :aligh=>"left", :size=>"60x60"%>
+			<%end unless  @in_embed.photo.nil?%>
+			<% end %>
+			<%=h @in_embed.place%><br/>
+			<%=link_to @in_embed.url, @in_embed.url%>
+	
+		</div>
+		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
+	</div>
+	
+	<div class="clear-10">&nbsp;</div>
+	<span class="micro_title">Request</span><br/>
+	<div class="boxLightGray">
+	    <b class="r5"></b><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b>
+		<div class="inner-box">
+			<% form_for :embed, :url => embeds_path, :html=>{:method=>:post, :multipart => true} do |f| -%>
+			<label for="post_title">Картинка</label><br/>
+			<%= file_field "image", "uploaded_data",:class=>"blog" %><br/>
+			<label for="post_title">Название</label><br/>
+			<%= f.text_field :title, :class=>"blog" %><br/>
+			<label for="post_title">Описание</label><br/>
+			<%= f.text_area :place, :class=>"blog", :style=>"width:420px;height:80px" %><br/>
+			<label for="post_title">URL</label><br/>
+			<%= f.text_field :url, :class=>"blog" %><br/>
+			<span class="micro_title">Контакты</span><br/>
+			<label for="post_title">email</label><br/>
+			<%= f.text_field :email, :class=>"blog" %><br/>
+			<label for="post_title">Имья</label><br/>
+			<%= f.text_field :name, :class=>"blog" %><br/>
+			<%= submit_tag "Сохранить", :class=>"submit" %>
+			<% end %>
+		</div>
+		<b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b><b class="r5"></b>
+	</div>
+</div>
+
+<div class="column span-6">
+	<span class="micro_title">Уже присоединились</span><br/>
+	<ul>
+	<% @embeds.each do |e| %>
+		<li><%=link_to e.url, e.name%></li>
+	<% end %>
+	</ul>
+</div>
+
