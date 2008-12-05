@@ -20,10 +20,10 @@
 			<%content_tag("div", :style=>"float:left;") do %>
 				<%=image_tag @in_embed.photo.public_filename, :aligh=>"left", :size=>"60x60"%>
 			<%end unless  @in_embed.photo.nil?%>
-			<% end %>
+			
 			<%=h @in_embed.place%><br/>
 			<%=link_to @in_embed.url, @in_embed.url%>
-	
+			<% end %>
 		</div>
 		<b class="rl1"></b><b class="rl2"></b><b class="rl3"></b><b class="rl4"></b><b class="rl5"></b>
 	</div>
